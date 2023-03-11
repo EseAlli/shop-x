@@ -29,7 +29,7 @@ const index = () => {
     ),
   };
   return (
-    <div className="max-h-[40vh]">
+    <>
       <Slider {...settings}>
         <div className="relative">
           <Image
@@ -107,7 +107,7 @@ const index = () => {
           </div>
         </div>
       </Slider>
-    </div>
+    </>
   );
 };
 

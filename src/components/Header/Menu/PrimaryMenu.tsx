@@ -58,7 +58,7 @@ const PrimaryMenu = () => {
                   {item?.name}
                 </li>
                 <li>
-                  <div className="absolute hidden group-hover:flex bg-white p-4  right-0 left-0">
+                  <div className="absolute hidden group-hover:flex bg-white p-4 z-50 right-0 left-0">
                     <div className="min-w-[600px] lg:min-w-[900px] mx-auto max-w-6xl">
                       <ul className="grid grid-cols-2 ">
                         {item?.categories?.map(
