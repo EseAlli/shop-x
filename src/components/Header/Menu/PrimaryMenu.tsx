@@ -2,6 +2,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { Fragment, useState } from "react";
 import { menuData } from "./menuData";
+import { BsPerson, BsBag } from "react-icons/bs";
+import { HiOutlineHeart } from "react-icons/hi2";
+import SearchBar from "./SearchBar";
 
 const PrimaryMenu = () => {
   const [current, setCurrent] = useState("women");
@@ -31,11 +34,20 @@ const PrimaryMenu = () => {
           ))}
         </ul>
         <p className="uppercase text-xl md:text-3xl font-bold">Shop X</p>
-        <ul className="flex gap-2">
-          <li>Login</li>
-          <li>Wishlist</li>
-          <li>Cart</li>
-        </ul>
+        <div className="flex md:gap-3 items-center">
+          <SearchBar />
+          <ul className="flex gap-2 md:gap-4 items-center">
+            <li className="flex items-center">
+              <BsPerson size="1.35rem" />
+            </li>
+            <li className="flex items-center">
+              <HiOutlineHeart size="1.35rem" />
+            </li>
+            <li className="flex items-center">
+              <BsBag size="1.25rem" />
+            </li>
+          </ul>
+        </div>
       </nav>
       <ul className="bg-[#f2f2f2] md:flex gap-3 px-20 py-3 hidden ">
         {menuData.map(({ menu, subMenu }, index: number) => {
