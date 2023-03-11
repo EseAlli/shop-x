@@ -5,6 +5,8 @@ import { menuData } from "@db/menuData";
 import { BsPerson, BsBag } from "react-icons/bs";
 import { HiOutlineHeart } from "react-icons/hi2";
 import SearchBar from "./SearchBar";
+import Image from "next/image";
+import Logo from "../../../../public/logo.webp";
 
 const PrimaryMenu = () => {
   const [current, setCurrent] = useState("women");
@@ -33,7 +35,9 @@ const PrimaryMenu = () => {
             </Link>
           ))}
         </ul>
-        <p className="uppercase text-xl md:text-3xl font-bold">Shop X</p>
+        <div>
+          <Image src={Logo} width={200} height={150} alt="Shop X" />
+        </div>
         <div className="flex md:gap-3 items-center">
           <SearchBar />
           <ul className="flex gap-2 md:gap-4 items-center">
