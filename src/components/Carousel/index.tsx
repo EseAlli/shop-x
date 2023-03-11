@@ -5,19 +5,33 @@ import Slider from "react-slick";
 import Image from "next/image";
 import woman from "../../../public/slider-women-1.jpg";
 import women from "../../../public/slide-women-2.avif";
+import Link from "next/link";
 
 const index = () => {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    appendDots: (dots: any) => (
+      <div
+        style={{
+          backgroundColor: "transparent",
+          borderRadius: "10px",
+          padding: "10px",
+        }}
+      >
+        <ul style={{ marginTop: "-70px" }}> {dots} </ul>
+      </div>
+    ),
   };
   return (
     <div className="max-h-[40vh]">
       <Slider {...settings}>
-        <div>
+        <div className="relative">
           <Image
             width={700}
             height={475}
@@ -31,8 +45,18 @@ const index = () => {
             alt="slide"
             src={woman}
           />
+          <div className="absolute bottom-4 left-4 md:left-14 md:bottom-20 flex flex-col gap-2">
+            <p className="text-white  md:text-xl">Fresh palettes</p>
+            <p className="text-white md:text-4xl">Pretty pastels</p>
+            <Link
+              href="/"
+              className="px-4 font-medium bg-white py-2 self-start"
+            >
+              Shop
+            </Link>
+          </div>
         </div>
-        <div>
+        <div className="relative">
           <Image
             width={700}
             height={475}
@@ -46,8 +70,18 @@ const index = () => {
             alt="slide"
             src={women}
           />
+          <div className="absolute bottom-4 left-4 md:left-14 md:bottom-20 flex flex-col gap-2">
+            <p className="text-white  md:text-xl">Fresh palettes</p>
+            <p className="text-white md:text-4xl">Pretty pastels</p>
+            <Link
+              href="/"
+              className="px-4 font-medium bg-white py-2 self-start"
+            >
+              Shop
+            </Link>
+          </div>
         </div>
-        <div>
+        <div className="relative">
           <Image
             width={700}
             height={475}
@@ -61,6 +95,16 @@ const index = () => {
             alt="slide"
             src={woman}
           />
+          <div className="absolute bottom-4 left-4 md:left-14 md:bottom-20 flex flex-col gap-2">
+            <p className="text-white  md:text-xl">Fresh palettes</p>
+            <p className="text-white md:text-4xl">Pretty pastels</p>
+            <Link
+              href="/"
+              className="px-4 font-medium bg-white py-2 self-start"
+            >
+              Shop
+            </Link>
+          </div>
         </div>
       </Slider>
     </div>
