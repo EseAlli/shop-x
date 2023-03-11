@@ -55,9 +55,8 @@ const index = () => {
             © 2023 SHOP X INC{" "}
           </p>
           <ul className="flex gap-2 text-xs text-slate-500">
-            <li>Privacy Policy</li>
+            <li className="no-break break-keep">Privacy Policy</li>
             <li>Ts&Cs</li>
-            <li>Accesibility</li>
           </ul>
         </div>
       </div>
