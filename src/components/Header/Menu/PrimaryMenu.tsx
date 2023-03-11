@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { Fragment, useState } from "react";
-import { menuData } from "./menuData";
+import { menuData } from "@db/menuData";
 import { BsPerson, BsBag } from "react-icons/bs";
 import { HiOutlineHeart } from "react-icons/hi2";
 import SearchBar from "./SearchBar";
