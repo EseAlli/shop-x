@@ -4,7 +4,7 @@ const index = () => {
   return (
     <footer className=" bg-">
       <div className="bg-[#f2f2f2] py-3  text-xs">
-        <div className="grid-cols-4 grid container mx-auto p-2">
+        <div className=" grid-cols-2 md:grid-cols-4 grid container mx-auto p-2">
           <div>
             <p className="uppercase font-bold text-sm tracking-widest text-slate-700">
               help and information
