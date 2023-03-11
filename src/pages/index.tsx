@@ -1,6 +1,8 @@
 import Layout from "@components/Layout";
 import Carousel from "@components/Carousel";
 import Categories from "@components/Categories";
+import Popular from "@components/Popular";
+
 import { categories } from "@db/categoryData";
 export default function Home() {
   return (
@@ -8,6 +10,7 @@ export default function Home() {
       <Layout>
         <Carousel />
         <Categories data={categories.women} />
+        <Popular />
       </Layout>
     </>
   );
