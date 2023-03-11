@@ -1,43 +1,80 @@
-import React, { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { Fragment, useState } from "react";
 import { menuData } from "./menuData";
 
 const PrimaryMenu = () => {
   const [current, setCurrent] = useState("women");
+  const router = useRouter();
+  const currentRoute = router.pathname;
+  console.log(currentRoute);
   return (
-    <nav className="">
-      <nav className="container mx-auto py-3 flex justify-between">
-        <ul className="flex gap-2 lg:gap-6 ">
-          {menuData.map(({ menu }, index: number) => (
-            <li
-              key={index}
-              className="capitalize text-slate-400 hover:text-black hover:cursor-pointer"
+    <>
+      <nav className="container mx-auto flex justify-between px-2 items-center">
+        <ul className="md:flex gap-4 lg:gap-6 hidden">
+          {menuData.map(({ menu, id }) => (
+            <Link
+              href={`${menu}`}
+              key={id}
+              className={
+                currentRoute === `/${menu}` ||
+                (currentRoute === `/` &&
+                  current === "women" &&
+                  menu === "women")
+                  ? "capitalize text-black hover:cursor-pointer font-medium border-black border-b-2 py-3"
+                  : "capitalize text-slate-400 hover:text-black hover:cursor-pointer hover:font-medium py-3"
+              }
               onClick={() => setCurrent(menu)}
             >
               {menu}
-            </li>
+            </Link>
           ))}
         </ul>
-        <p className="uppercase font-bold">Shop X</p>
+        <p className="uppercase text-xl md:text-3xl font-bold">Shop X</p>
         <ul className="flex gap-2">
           <li>Login</li>
           <li>Wishlist</li>
           <li>Cart</li>
         </ul>
       </nav>
-      <ul className="bg-[#f2f2f2] flex gap-3 px-20 py-3">
+      <ul className="bg-[#f2f2f2] md:flex gap-3 px-20 py-3 hidden ">
         {menuData.map(({ menu, subMenu }, index: number) => {
           if (menu === current) {
             return subMenu.map((item) => (
-              <li className="font-medium hover:cursor-pointer" key={index}>
-                {item?.name}
-              </li>
+              <div key={index} className="group">
+                <li className="font-medium hover:cursor-pointer relative">
+                  {item?.name}
+                </li>
+                <li>
+                  <div className="absolute hidden group-hover:flex bg-white p-4  right-0 left-0">
+                    <div className="min-w-[600px] lg:min-w-[900px] mx-auto max-w-6xl">
+                      <ul className="grid grid-cols-2 ">
+                        {item?.categories?.map(
+                          ({ name, sub }, index: number) => (
+                            <li key={index}>
+                              <p>{name}</p>
+                              <ul>
+                                {sub?.map(({ name }, index: number) => (
+                                  <li className="font-normal" key={index}>
+                                    {name}
+                                  </li>
+                                ))}
+                              </ul>
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </div>
             ));
           } else {
             return null;
           }
         })}
       </ul>
-    </nav>
+    </>
   );
 };
 
