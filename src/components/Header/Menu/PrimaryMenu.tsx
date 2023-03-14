@@ -15,8 +15,8 @@ const PrimaryMenu = () => {
   console.log(currentRoute);
   return (
     <>
-      <nav className="container mx-auto flex justify-between px-2 items-center">
-        <ul className="md:flex gap-4 lg:gap-6 hidden">
+      <nav className="flex justify-between px-2 md:px-8 lg:px-14 xl:px-16 items-center">
+        <ul className="md:flex gap-4 lg:gap-6 xl:gap-10 hidden">
           {menuData.map(({ menu, id }) => (
             <Link
               href={`${menu}`}
@@ -26,8 +26,8 @@ const PrimaryMenu = () => {
                 (currentRoute === `/` &&
                   current === "women" &&
                   menu === "women")
-                  ? "capitalize text-black hover:cursor-pointer font-medium border-black border-b-2 py-3"
-                  : "capitalize text-slate-400 hover:text-black hover:cursor-pointer hover:font-medium py-3"
+                  ? "capitalize text-black hover:cursor-pointer font-medium border-black border-b-2  py-5 text-sm"
+                  : "capitalize text-slate-400 hover:text-black hover:cursor-pointer hover:font-medium py-5 text-sm"
               }
               onClick={() => setCurrent(menu)}
             >
@@ -36,9 +36,17 @@ const PrimaryMenu = () => {
           ))}
         </ul>
         <div>
-          <Image src={Logo} width={200} height={150} alt="Shop X" />
+          <Image
+            src={Logo}
+            width={120}
+            height={150}
+            alt="Shop X"
+            style={{
+              paddingBlock: "1rem",
+            }}
+          />
         </div>
-        <div className="flex md:gap-3 items-center">
+        <div className="flex md:gap-3 items-center md:py-3">
           <SearchBar />
           <ul className="flex gap-2 md:gap-4 items-center">
             <li className="flex items-center">
@@ -53,12 +61,12 @@ const PrimaryMenu = () => {
           </ul>
         </div>
       </nav>
-      <ul className="bg-[#f2f2f2] md:flex gap-3 px-20 py-3 hidden ">
+      <ul className="bg-[#f2f2f2] md:flex gap-3 lg:gap-6 xl:gap-9 px-16 py-3 lg:py-4 hidden ">
         {menuData.map(({ menu, subMenu }, index: number) => {
           if (menu === current) {
             return subMenu.map((item) => (
               <div key={index} className="group">
-                <li className="font-medium hover:cursor-pointer relative">
+                <li className="font-medium hover:cursor-pointer relative text-sm">
                   {item?.name}
                 </li>
                 <li>

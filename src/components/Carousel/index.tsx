@@ -14,8 +14,8 @@ const index = () => {
     speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 9000,
     appendDots: (dots: any) => (
       <div
         style={{
@@ -31,7 +31,7 @@ const index = () => {
   return (
     <>
       <Slider {...settings}>
-        <div className="relative">
+        <div className="relative md:max-h-[600px] 2xl:max-h-[725px]">
           <Image
             width={700}
             height={475}
@@ -39,13 +39,13 @@ const index = () => {
             style={{
               width: "100%",
               height: "auto",
-              maxHeight: "600px",
+              maxHeight: "inherit",
               objectFit: "cover",
             }}
             alt="slide"
             src={woman}
           />
-          <div className="absolute bottom-4 left-4 md:left-14 md:bottom-20 flex flex-col gap-2">
+          <div className="absolute bottom-4 left-4 md:left-14 lg:left-20 xl:left-24 md:bottom-14 flex flex-col gap-2">
             <p className="text-white  md:text-xl">Fresh palettes</p>
             <p className="text-white md:text-4xl">Pretty pastels</p>
             <Link
@@ -56,7 +56,7 @@ const index = () => {
             </Link>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative md:max-h-[600px] 2xl:max-h-[725px]">
           <Image
             width={700}
             height={475}
@@ -64,13 +64,13 @@ const index = () => {
             style={{
               width: "100%",
               height: "auto",
-              maxHeight: "600px",
+              maxHeight: "inherit",
               objectFit: "cover",
             }}
             alt="slide"
             src={women}
           />
-          <div className="absolute bottom-4 left-4 md:left-14 md:bottom-20 flex flex-col gap-2">
+          <div className="absolute bottom-4 left-4 md:left-14 lg:left-20 xl:left-24 md:bottom-14 flex flex-col gap-2">
             <p className="text-white  md:text-xl">Fresh palettes</p>
             <p className="text-white md:text-4xl">Pretty pastels</p>
             <Link
@@ -81,7 +81,7 @@ const index = () => {
             </Link>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative md:max-h-[600px] 2xl:max-h-[725px]">
           <Image
             width={700}
             height={475}
@@ -89,13 +89,13 @@ const index = () => {
             style={{
               width: "100%",
               height: "auto",
-              maxHeight: "600px",
+              maxHeight: "inherit",
               objectFit: "cover",
             }}
             alt="slide"
             src={woman}
           />
-          <div className="absolute bottom-4 left-4 md:left-14 md:bottom-20 flex flex-col gap-2">
+          <div className="absolute bottom-4 left-4 md:left-14 lg:left-20 xl:left-24 md:bottom-14 flex flex-col gap-2">
             <p className="text-white  md:text-xl">Fresh palettes</p>
             <p className="text-white md:text-4xl">Pretty pastels</p>
             <Link
