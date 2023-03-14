@@ -12,7 +12,6 @@ const PrimaryMenu = () => {
   const [current, setCurrent] = useState("women");
   const router = useRouter();
   const currentRoute = router.pathname;
-  console.log(currentRoute);
   return (
     <>
       <nav className="flex justify-between px-2 md:px-8 lg:px-14 xl:px-16 items-center">

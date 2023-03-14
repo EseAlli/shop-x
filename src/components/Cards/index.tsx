@@ -9,7 +9,9 @@ export const CCard = ({ content }: any) => {
   );
 };
 
-export const ImageCard = ({ src }: any) => {
+export const ImageCard = ({ details }: any) => {
+  const { image: src, name, brand, price } = details;
+
   return (
     <div className="hover:cursor-pointer">
       <Image
@@ -24,9 +26,9 @@ export const ImageCard = ({ src }: any) => {
         }}
       />
       <div className="mt-2">
-        <p className="uppercase text-xs font-semibold">name of product</p>
-        <p className="font-thin text-sm">$38.79</p>
-        <p className="text-xs uppercase">brand</p>
+        <p className="uppercase text-xs font-semibold">{name}</p>
+        <p className="font-thin text-sm">${price}</p>
+        <p className="text-xs uppercase">{brand}</p>
       </div>
     </div>
   );

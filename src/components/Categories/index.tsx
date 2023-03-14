@@ -2,7 +2,6 @@ import { CCard } from "@components/Cards";
 import React from "react";
 
 const index = ({ data }: any) => {
-  console.log(data);
   return (
     <div className="2xl:container mx-auto py-4 px-3 md:px-5 lg:px-8 2xl:px-0">
       <p className="text-xl md:text-2xl font-medium">Categories</p>
