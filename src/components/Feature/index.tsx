@@ -22,17 +22,15 @@ export const Single = () => {
   );
 };
 
-export const DoubleFeature = () => {
+export const DoubleFeature = ({ feature }: any) => {
   return (
     <div className="my-5 md:my-14 xl:my-24 2xl:container mx-auto px-2 md:px-4 lg:px-8">
       <div className="flex ">
         <div className="bg-[#8EBADE] w-[80%] text-white">
           <div className="flex items-center max-w-xl mx-auto h-full px-4">
             <div>
-              <p className="md:text-xl">Sleek fits</p>
-              <p className="text-xl md:text-3xl lg:text-5xl">
-                Curated coats guide
-              </p>
+              <p className="md:text-xl">{feature.tagline}</p>
+              <p className="text-xl md:text-3xl lg:text-5xl">{feature.title}</p>
               <p className="my-3 md:my-8 py-1 px-5 bg-white uppercase w-24 text-black">
                 Story
               </p>
@@ -40,7 +38,7 @@ export const DoubleFeature = () => {
           </div>
         </div>
         <Image
-          src={feature}
+          src={feature.image}
           alt="feature"
           width={600}
           height={600}
