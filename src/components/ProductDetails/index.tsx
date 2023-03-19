@@ -7,14 +7,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-export const ProductCarousel = ({ items, autoplay }: any) => {
+export const ProductCarousel = ({ items }: any) => {
   const content = () => {
     return items.map((image: any, index: number) => {
       return (
-        <div
-          key={index}
-          className="relative md:max-h-[600px] 2xl:max-h-[725px]"
-        >
+        <div key={index} className="relative">
           <Image
             width={700}
             height={475}
@@ -23,7 +20,7 @@ export const ProductCarousel = ({ items, autoplay }: any) => {
               width: "100%",
               height: "auto",
               maxHeight: "inherit",
-              objectFit: "cover",
+              objectFit: "contain",
             }}
             alt="slide"
             src={image}
@@ -35,11 +32,10 @@ export const ProductCarousel = ({ items, autoplay }: any) => {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 4000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: autoplay || false,
-    autoplaySpeed: 9000,
+    autoplay: false,
     appendDots: (dots: any) => (
       <div
         style={{
