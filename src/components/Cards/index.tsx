@@ -71,3 +71,15 @@ export const ProductCard = ({}) => {
     </Link>
   );
 };
+
+export const ProductGallery = () => {
+  return (
+    <div className="max-w-[90%] mx-auto">
+      <div className="grid grid-flow-col">
+        <p>1</p>
+        <p>1</p>
+        <p>1</p>
+      </div>
+    </div>
+  );
+};

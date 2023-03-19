@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <Carousel items={carousel} />
+        <Carousel items={carousel} autoplay={true} />
         <Categories data={categories} />
         <Popular item={dresses} name="dresses" />
         <SFeature />

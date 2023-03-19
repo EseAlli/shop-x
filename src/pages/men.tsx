@@ -11,7 +11,7 @@ const men = () => {
   return (
     <>
       <Layout>
-        <Carousel items={carousel} />
+        <Carousel items={carousel} autoplay={true} />
         <Categories data={categories} />
         <Popular item={shoes} name="shoes" />
         <SFeature />

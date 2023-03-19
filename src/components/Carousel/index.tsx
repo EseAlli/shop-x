@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import Image from "next/image";
 import Link from "next/link";
 
-const index = ({ items }: any) => {
+const index = ({ items, autoplay }: any) => {
   const content = () => {
     return items.map(({ image, tagline, title, url }: any, index: number) => {
       return (
@@ -46,7 +46,7 @@ const index = ({ items }: any) => {
     speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: autoplay || false,
     autoplaySpeed: 9000,
     appendDots: (dots: any) => (
       <div
