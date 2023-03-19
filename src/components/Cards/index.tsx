@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import kid from "../../../public/kid.avif";
 
 export const CCard = ({ content }: any) => {
   return (
@@ -36,29 +35,30 @@ export const ImageCard = ({ details }: any) => {
   );
 };
 
-export const ProductCard = ({}) => {
+export const ProductCard = ({ product }: any) => {
+  const { id, images, color, selling_price, brand, name } = product;
   return (
-    <Link href="/p">
+    <Link href={`/p/${id}`}>
       <div className="hover:cursor-pointer">
         <Image
-          src={kid}
-          height={400}
+          src={images[0]}
+          height={600}
           width={400}
-          alt="kid"
+          alt={name}
           style={{
-            minHeight: "400px",
-            height: "auto",
+            // minHeight: "400px",
+            height: "100%",
             width: "500px",
-            objectFit: "cover",
+            objectFit: "contain",
           }}
         />
         <div className="container mx-auto px-3">
           <div className="my-2">
-            <p className="text-[10px] font-semibold uppercase">Brand it</p>
-            <p className="text-[12px]">Cool Jacket</p>
+            <p className="text-[10px] font-semibold uppercase">{brand}</p>
+            <p className="text-[12px]">{name}</p>
             <div className="text-[10px] my-2">
-              <p>$ 43.90</p>
-              <p className="line-through">$ 49.90</p>
+              <p>$ {selling_price}</p>
+              {/* <p className="line-through">$ 49.90</p> */}
             </div>
             <div className="flex gap-1">
               <div className="p-1.5 rounded-full bg-black w-px h-px"></div>

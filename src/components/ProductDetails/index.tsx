@@ -1,22 +1,70 @@
 import React from "react";
 import item from "../../../public/kid.avif";
 import Image from "next/image";
-import Carousel from "@components/Carousel";
 import Select from "@components/Select";
-
-import { homeData } from "@db/homeData";
 import { AiOutlineHeart } from "react-icons/ai";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
-export const index = () => {
-  return <div>index</div>;
+export const ProductCarousel = ({ items, autoplay }: any) => {
+  const content = () => {
+    return items.map((image: any, index: number) => {
+      return (
+        <div
+          key={index}
+          className="relative md:max-h-[600px] 2xl:max-h-[725px]"
+        >
+          <Image
+            width={700}
+            height={475}
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+              maxHeight: "inherit",
+              objectFit: "cover",
+            }}
+            alt="slide"
+            src={image}
+          />
+        </div>
+      );
+    });
+  };
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 4000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: autoplay || false,
+    autoplaySpeed: 9000,
+    appendDots: (dots: any) => (
+      <div
+        style={{
+          backgroundColor: "transparent",
+          borderRadius: "10px",
+          padding: "10px",
+        }}
+      >
+        <ul style={{ marginTop: "-70px" }}> {dots} </ul>
+      </div>
+    ),
+  };
+  return (
+    <>
+      <Slider {...settings}>{content()}</Slider>
+    </>
+  );
 };
 
-export const ColourPicker = () => {
+export const ColourPicker = ({ sellingPrice, color }: any) => {
   return (
     <div className="my-2 lg:my-4">
-      <p>$ 36.90</p>
-      <p>Color: Black</p>
-      <div>
+      <p>$ {sellingPrice}</p>
+      <p>Color: {color}</p>
+      {/* <div>
         <div className="flex flex-wrap gap-2">
           <div className="hover:cursor-pointer ">
             <Image src={item} width={75} height={60} alt="color-black" />
@@ -31,27 +79,26 @@ export const ColourPicker = () => {
             <Image src={item} width={75} height={60} alt="color-black" />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export const ProductDetails = () => {
-  const { carousel } = homeData.women;
-
+export const ProductDetails = ({ product }: any) => {
+  const { images, brand, name, selling_price, color } = product;
   return (
     <div className="mx-auto max-w-[95%] mb-4 md:mb-7">
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-7/12">
-          <Carousel items={carousel} autoplay={false} />
+          <ProductCarousel items={images} autoplay={false} />
         </div>
         <div className="w-full md:w-4/12 mx-auto md:py-4 lg:py-7 px-4">
           <div className="flex flex-col gap-2">
             <p className="text-xl md:text-3xl lg:text-4xl tracking-widest">
-              name it
+              {brand}
             </p>
-            <p className="text-sm">Jeans {`"NKMTHEO"`}</p>
-            <ColourPicker />
+            <p className="text-sm">{name}</p>
+            <ColourPicker sellingPrice={selling_price} color={color} />
 
             <div className="w-[60%]">
               <Select defaultOption="Select Size" />
