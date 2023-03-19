@@ -85,20 +85,24 @@ export const ColourPicker = ({ sellingPrice, color }: any) => {
 };
 
 export const ProductDetails = ({ product }: any) => {
-  const { images, brand, name, selling_price, color } = product;
   return (
     <div className="mx-auto max-w-[95%] mb-4 md:mb-7">
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-7/12">
-          <ProductCarousel items={images} autoplay={false} />
+          {product?.images && (
+            <ProductCarousel items={product?.images} autoplay={false} />
+          )}
         </div>
         <div className="w-full md:w-4/12 mx-auto md:py-4 lg:py-7 px-4">
           <div className="flex flex-col gap-2">
             <p className="text-xl md:text-3xl lg:text-4xl tracking-widest">
-              {brand}
+              {product?.brand}
             </p>
-            <p className="text-sm">{name}</p>
-            <ColourPicker sellingPrice={selling_price} color={color} />
+            <p className="text-sm">{product?.name}</p>
+            <ColourPicker
+              sellingPrice={product?.selling_price}
+              color={product?.color}
+            />
 
             <div className="w-[60%]">
               <Select defaultOption="Select Size" />
