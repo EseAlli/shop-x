@@ -7,11 +7,16 @@ import { HiOutlineHeart } from "react-icons/hi2";
 import SearchBar from "./SearchBar";
 import Image from "next/image";
 import Logo from "../../../../public/logo.webp";
+import AuthModal from "@components/Auth";
 
 const PrimaryMenu = () => {
   const [current, setCurrent] = useState("women");
+  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const currentRoute = router.pathname;
+  const onClose = () => {
+    setIsOpen(true);
+  };
   return (
     <>
       <nav className="flex justify-between px-2 md:px-8 lg:px-14 xl:px-16 items-center">
@@ -47,14 +52,17 @@ const PrimaryMenu = () => {
         </div>
         <div className="flex md:gap-3 items-center md:py-3">
           <SearchBar />
-          <ul className="flex gap-2 md:gap-4 items-center">
-            <li className="flex items-center">
+          <ul className="flex gap-2 md:gap-4 items-center ">
+            <li
+              className="flex items-center hover:cursor-pointer"
+              onClick={() => setIsOpen(true)}
+            >
               <BsPerson size="1.35rem" />
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center hover:cursor-pointer">
               <HiOutlineHeart size="1.35rem" />
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center hover:cursor-pointer">
               <BsBag size="1.25rem" />
             </li>
           </ul>
@@ -97,6 +105,7 @@ const PrimaryMenu = () => {
           }
         })}
       </ul>
+      <AuthModal onClose={onClose} isOpen={isOpen} />
     </>
   );
 };
