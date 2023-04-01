@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "@components/Layout";
 import { ProductDetails } from "@components/ProductDetails";
 import { homeData } from "@db/homeData";
 import { products } from "@db/productsData";
@@ -12,9 +11,7 @@ const ProductInfo = () => {
   const product = products.find((product) => product.id === Number(id));
   return (
     <>
-      <Layout>
-        <ProductDetails product={product} />
-      </Layout>
+      <ProductDetails product={product} />
     </>
   );
 };
