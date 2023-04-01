@@ -13,7 +13,6 @@ const Modal: FC<ModalProps> = ({ isOpen, children, onClose, title }) => {
   };
 
   useEffect(() => {
-    console.log("useeffect");
     isOpen ? handleOpen() : handleClose();
   }, [isOpen]);
 

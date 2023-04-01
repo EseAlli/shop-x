@@ -1,4 +1,3 @@
-import Layout from "@components/Layout";
 import Carousel from "@components/Carousel";
 import Categories from "@components/Categories";
 import Popular from "@components/Popular";
@@ -10,15 +9,13 @@ export default function Home() {
   const { dresses, bags, accessories } = popular;
   return (
     <>
-      <Layout>
-        <Carousel items={carousel} autoplay={true} />
-        <Categories data={categories} />
-        <Popular item={dresses} name="dresses" />
-        <SFeature />
-        <Popular item={bags} name="bags" />
-        <DoubleFeature feature={feature} />
-        <Popular item={accessories} name="accessories" />
-      </Layout>
+      <Carousel items={carousel} autoplay={true} />
+      <Categories data={categories} />
+      <Popular item={dresses} name="dresses" />
+      <SFeature />
+      <Popular item={bags} name="bags" />
+      <DoubleFeature feature={feature} />
+      <Popular item={accessories} name="accessories" />
     </>
   );
 }
