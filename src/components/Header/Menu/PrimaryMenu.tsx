@@ -60,7 +60,9 @@ const PrimaryMenu = () => {
               <BsPerson size="1.35rem" />
             </li>
             <li className="flex items-center hover:cursor-pointer">
-              <HiOutlineHeart size="1.35rem" />
+              <Link href="/wishlist">
+                <HiOutlineHeart size="1.35rem" />
+              </Link>
             </li>
             <li className="flex items-center hover:cursor-pointer">
               <BsBag size="1.25rem" />
