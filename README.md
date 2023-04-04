@@ -14,8 +14,6 @@ Install dependencies:
 cd shop-x
 yarn install
 ```
-bash
-Copy code
 
 ## Set up the backend:
 * Install Hasura and PostgreSQL
