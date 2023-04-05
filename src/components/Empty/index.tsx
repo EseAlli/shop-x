@@ -1,13 +1,11 @@
 import React from "react";
+import { Facebook as Placeholder } from "react-content-loader";
 
 const index = () => {
   return (
-    <div>
-      <div>
-        <h3>Wishlist</h3>
-      </div>
-      <div>
-        <p>Placeholder image</p>
+    <div className="h-[60%] flex items-center">
+      <div className="flex">
+        <Placeholder />
         <div>
           <p>Your wishlist is empty</p>
           <p>

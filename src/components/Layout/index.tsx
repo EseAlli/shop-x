@@ -7,7 +7,9 @@ const Index = ({ children }: Props) => {
   return (
     <>
       <Header />
-      {children}
+      <div className="min-h-[calc(100vh-250px)] h-full flex flex-col">
+        <>{children}</>
+      </div>
       <Footer />
     </>
   );
