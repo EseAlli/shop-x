@@ -65,7 +65,9 @@ const PrimaryMenu = () => {
               </Link>
             </li>
             <li className="flex items-center hover:cursor-pointer">
-              <BsBag size="1.25rem" />
+              <Link href="/cart">
+                <BsBag size="1.25rem" />
+              </Link>
             </li>
           </ul>
         </div>

@@ -4,7 +4,7 @@ const CategorySidebar = () => {
   return (
     <>
       <div className="w-full md:w-[10%] flex justify-end">
-        <ul className="lg:mt-10 flex flex-col gap-2">
+        <ul className="lg:mt-10 flex md:flex-col gap-2">
           <li>New in</li>
           <li>Clothing</li>
           <li>Shoes</li>
