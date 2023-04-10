@@ -1,16 +1,35 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { menuData } from "@db/menuData";
+import Link from "next/link";
 
 const CategorySidebar = () => {
+  const router = useRouter();
+  const currentRoute = router.pathname;
+  const [, main, sub] = currentRoute.split("/");
+  const subMenu = menuData.find((item) => item.menu === main)?.subMenu;
+
+  console.log(subMenu);
   return (
     <>
-      <div className="w-full md:w-[10%] flex justify-end">
+      <div className="w-full md:w-[15%] flex justify-end">
         <ul className="lg:mt-10 flex md:flex-col gap-2">
-          <li>New in</li>
-          <li>Clothing</li>
-          <li>Shoes</li>
-          <li>Accessories</li>
-          <li>Trending</li>
-          <li>Clearance</li>
+          {subMenu?.map(({ name, url, categories }, index: number) => (
+            <>
+              <li key={index} className={url === sub ? `font-bold` : ""}>
+                {name}
+              </li>
+              {url === sub && (
+                <ul className="ml-5 grid gap-y-2 text-sm">
+                  {categories?.map(({ name, url }, index: number) => (
+                    <li key={index}>
+                      <Link href={`/${main}/${url}`}>{name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          ))}
         </ul>
       </div>
     </>

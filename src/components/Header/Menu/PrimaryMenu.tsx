@@ -15,7 +15,6 @@ const PrimaryMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const currentRoute = router.pathname;
-  console.log(currentRoute);
   const onClose = () => {
     setIsOpen(false);
   };
