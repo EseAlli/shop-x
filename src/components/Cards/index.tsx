@@ -35,7 +35,7 @@ export const ImageCard = ({ details }: any) => {
   );
 };
 
-export const ProductCard = ({ product }: any) => {
+export const ProductCard = ({ product, add }: any) => {
   const { id, images, color, selling_price, brand, name } = product;
   return (
     <Link href={`/p/${id}`}>
@@ -65,11 +65,13 @@ export const ProductCard = ({ product }: any) => {
               <div className="p-1.5 rounded-full bg-slate-500 w-px h-px"></div>
               <div className="p-1.5 rounded-full bg-black w-px h-px"></div>
             </div>
-            <div className="flex my-5 w-full">
-              <button className="bg-black text-center text-white w-full py-4 text-sm font-semibold">
-                Add
-              </button>
-            </div>
+            {add && (
+              <div className="flex my-5 w-full">
+                <button className="bg-black text-center text-white w-full py-4 text-sm font-semibold">
+                  Add
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>

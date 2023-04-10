@@ -5,27 +5,120 @@ export const menuData = [
     subMenu: [
       {
         name: "New In",
+        url: "new_in",
         categories: [
           {
-            name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            name: "Explore All",
+            // sub: [
+            //   {
+            //     name: "Explore All",
+            //   },
+            // ],
           },
           {
-            name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            name: "Tops",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+          {
+            name: "Jeans",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+          {
+            name: "Dresses",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+          {
+            name: "Pants",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+          {
+            name: "Underwear",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+          {
+            name: "Sweaters and Cardigans",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+          {
+            name: "Sweaters and Cardigans",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+          {
+            name: "Sweaters and Cardigans",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+          {
+            name: "Sweaters and Cardigans",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+          {
+            name: "Sweaters and Cardigans",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+          {
+            name: "Sweaters and Cardigans",
+            // sub: [
+            //   {
+            //     name: "Vanilla By Nilla",
+            //   },
+            // ],
+          },
+        ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
+          },
+          {
+            name: "Nike",
           },
         ],
       },
       {
         name: "Clothing",
+        url: "clothing",
         categories: [
           {
             name: "New",
@@ -42,11 +135,23 @@ export const menuData = [
                 name: "Vanilla By Nilla",
               },
             ],
+          },
+        ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
+          },
+          {
+            name: "Nike",
           },
         ],
       },
       {
         name: "Shoes",
+        url: "shoes",
         categories: [
           {
             name: "New",
@@ -63,11 +168,23 @@ export const menuData = [
                 name: "Vanilla By Nilla",
               },
             ],
+          },
+        ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
+          },
+          {
+            name: "Nike",
           },
         ],
       },
       {
         name: "Accessories",
+        url: "accessories",
         categories: [
           {
             name: "New",
@@ -86,9 +203,18 @@ export const menuData = [
             ],
           },
         ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
+          },
+        ],
       },
       {
-        name: "Trending",
+        name: "Sale",
+        url: "sale",
         categories: [
           {
             name: "New",
@@ -107,9 +233,18 @@ export const menuData = [
             ],
           },
         ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
+          },
+        ],
       },
       {
-        name: "Clearance",
+        name: "Brands",
+        url: "brands",
         categories: [
           {
             name: "New",
@@ -126,6 +261,14 @@ export const menuData = [
                 name: "Vanilla By Nilla",
               },
             ],
+          },
+        ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
           },
         ],
       },
@@ -140,6 +283,7 @@ export const menuData = [
       },
       {
         name: "Clothing",
+        url: "clothing",
         categories: [
           {
             name: "New",
@@ -156,11 +300,20 @@ export const menuData = [
                 name: "Vanilla By Nilla",
               },
             ],
+          },
+        ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
           },
         ],
       },
       {
         name: "Shoes",
+        url: "shoes",
         categories: [
           {
             name: "New",
@@ -177,11 +330,20 @@ export const menuData = [
                 name: "Vanilla By Nilla",
               },
             ],
+          },
+        ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
           },
         ],
       },
       {
         name: "Accessories",
+        url: "accessories",
         categories: [
           {
             name: "New",
@@ -200,9 +362,18 @@ export const menuData = [
             ],
           },
         ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
+          },
+        ],
       },
       {
-        name: "Trending",
+        name: "Sale",
+        url: "sale",
         categories: [
           {
             name: "New",
@@ -221,9 +392,18 @@ export const menuData = [
             ],
           },
         ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
+          },
+        ],
       },
       {
-        name: "Clearance",
+        name: "Brands",
+        url: "brands",
         categories: [
           {
             name: "New",
@@ -240,6 +420,14 @@ export const menuData = [
                 name: "Vanilla By Nilla",
               },
             ],
+          },
+        ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
           },
         ],
       },
@@ -260,6 +448,7 @@ export const menuData = [
       },
       {
         name: "Accessories",
+        url: "accessories",
         categories: [
           {
             name: "New",
@@ -278,9 +467,18 @@ export const menuData = [
             ],
           },
         ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
+          },
+        ],
       },
       {
-        name: "Trending",
+        name: "Sale",
+        url: "sale",
         categories: [
           {
             name: "New",
@@ -299,9 +497,18 @@ export const menuData = [
             ],
           },
         ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
+          },
+        ],
       },
       {
-        name: "Clearance",
+        name: "Brands",
+        url: "brands",
         categories: [
           {
             name: "New",
@@ -318,6 +525,14 @@ export const menuData = [
                 name: "Vanilla By Nilla",
               },
             ],
+          },
+        ],
+        topBrands: [
+          {
+            name: "Adidas",
+          },
+          {
+            name: "Zara",
           },
         ],
       },

@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { Fragment, useState } from "react";
@@ -14,16 +15,23 @@ const PrimaryMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const currentRoute = router.pathname;
+  console.log(currentRoute);
   const onClose = () => {
     setIsOpen(false);
   };
+  const handleNav = useCallback(
+    (menu: string) => {
+      router.push(`/${menu}`);
+    },
+    [router]
+  );
   return (
     <>
       <nav className="flex justify-between px-2 md:px-8 lg:px-14 xl:px-16 items-center">
         <ul className="md:flex gap-4 lg:gap-6 xl:gap-10 hidden">
           {menuData.map(({ menu, id }) => (
             <Link
-              href={`${menu}`}
+              href={``}
               key={id}
               className={
                 currentRoute === `/${menu}` ||
@@ -33,7 +41,10 @@ const PrimaryMenu = () => {
                   ? "capitalize text-black hover:cursor-pointer font-medium border-black border-b-2  py-5 text-sm"
                   : "capitalize text-slate-400 hover:text-black hover:cursor-pointer hover:font-medium py-5 text-sm"
               }
-              onClick={() => setCurrent(menu)}
+              onClick={() => {
+                setCurrent(menu);
+                handleNav(menu);
+              }}
             >
               {menu}
             </Link>
@@ -78,26 +89,50 @@ const PrimaryMenu = () => {
             return subMenu.map((item) => (
               <div key={index} className="group">
                 <li className="font-medium hover:cursor-pointer relative text-sm">
-                  {item?.name}
+                  <Link
+                    href={`/${current}/${item?.url}`}
+                    onClick={() => console.log(current)}
+                  >
+                    {item?.name}
+                  </Link>
                 </li>
                 <li>
                   <div className="absolute hidden group-hover:flex bg-white p-4 z-50 right-0 left-0">
-                    <div className="min-w-[600px] lg:min-w-[900px] mx-auto max-w-6xl">
-                      <ul className="grid grid-cols-2 ">
-                        {item?.categories?.map(
-                          ({ name, sub }, index: number) => (
-                            <li key={index}>
-                              <p>{name}</p>
-                              <ul>
+                    <div className="mx-auto w-full px-12 h-[250px] py-3">
+                      <ul className="grid  grid-cols-3">
+                        <li>
+                          <ul className="grid grid-cols-2 gap-y-2 gap-x-0">
+                            <p className="uppercase text-xs mb-3 text-slate-400 col-span-2">
+                              shop by category
+                            </p>
+                            {item?.categories?.map(
+                              ({ name }, index: number) => (
+                                <li key={index}>
+                                  <p className="text-xs">{name}</p>
+                                  {/* <ul>
                                 {sub?.map(({ name }, index: number) => (
                                   <li className="font-normal" key={index}>
                                     {name}
                                   </li>
                                 ))}
-                              </ul>
-                            </li>
-                          )
-                        )}
+                              </ul> */}
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        </li>
+                        <li className="grid gap-y-2">
+                          <p className="uppercase text-xs text-slate-400 mb-3">
+                            top brands
+                          </p>
+                          {item?.topBrands?.map(({ name }, index: number) => (
+                            <ul key={index}>
+                              <li>
+                                <p className="text-xs">{name}</p>
+                              </li>
+                            </ul>
+                          ))}
+                        </li>
                       </ul>
                     </div>
                   </div>
