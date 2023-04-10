@@ -3,7 +3,7 @@ import React from "react";
 import { ProductCard } from "@components/Cards";
 import { products } from "@db/productsData";
 
-const clothing = () => {
+const Clothing = () => {
   return (
     <InnerLayout>
       <h3 className="mb-3">Clothing</h3>
@@ -17,4 +17,4 @@ const clothing = () => {
   );
 };
 
-export default clothing;
+export default Clothing;

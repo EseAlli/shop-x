@@ -9,99 +9,55 @@ export const menuData = [
         categories: [
           {
             name: "Explore All",
-            // sub: [
-            //   {
-            //     name: "Explore All",
-            //   },
-            // ],
+            url: "new_in",
           },
           {
             name: "Tops",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            url: "tops",
           },
           {
             name: "Jeans",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            url: "jeans",
           },
           {
             name: "Dresses",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            url: "dresses",
           },
           {
             name: "Pants",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            url: "pants",
           },
           {
             name: "Underwear",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            url: "underwear",
           },
           {
             name: "Sweaters and Cardigans",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            url: "sweaters-cardigans",
           },
           {
-            name: "Sweaters and Cardigans",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            name: "Blouses",
+            url: "blouses",
           },
           {
-            name: "Sweaters and Cardigans",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            name: "Skirts",
+            url: "skirts",
           },
           {
-            name: "Sweaters and Cardigans",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            name: "Swimwear",
+            url: "swimwear",
           },
           {
-            name: "Sweaters and Cardigans",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            name: "Coats",
+            url: "coats",
           },
           {
-            name: "Sweaters and Cardigans",
-            // sub: [
-            //   {
-            //     name: "Vanilla By Nilla",
-            //   },
-            // ],
+            name: "Blazer",
+            url: "BLazer",
+          },
+          {
+            name: "Jumpsuits & playsuits",
+            url: "jumpsuits",
           },
         ],
         topBrands: [
@@ -121,20 +77,55 @@ export const menuData = [
         url: "clothing",
         categories: [
           {
-            name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            name: "Explore All",
           },
           {
-            name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            name: "Tops",
+            url: "tops",
+          },
+          {
+            name: "Jeans",
+            url: "jeans",
+          },
+          {
+            name: "Dresses",
+            url: "dresses",
+          },
+          {
+            name: "Pants",
+            url: "pants",
+          },
+          {
+            name: "Underwear",
+            url: "underwear",
+          },
+          {
+            name: "Sweaters and Cardigans",
+            url: "sweaters-cardigans",
+          },
+          {
+            name: "Blouses",
+            url: "blouses",
+          },
+          {
+            name: "Skirts",
+            url: "skirts",
+          },
+          {
+            name: "Swimwear",
+            url: "swimwear",
+          },
+          {
+            name: "Coats",
+            url: "coats",
+          },
+          {
+            name: "Blazer",
+            url: "BLazer",
+          },
+          {
+            name: "Jumpsuits & playsuits",
+            url: "jumpsuits",
           },
         ],
         topBrands: [
@@ -155,19 +146,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -188,19 +171,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -218,19 +193,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -248,19 +215,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -287,19 +246,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -317,19 +268,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -347,19 +290,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -377,19 +312,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -407,19 +334,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -452,19 +371,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -482,19 +393,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [
@@ -512,19 +415,11 @@ export const menuData = [
         categories: [
           {
             name: "New",
-            sub: [
-              {
-                name: "View All",
-              },
-            ],
+            url: "women",
           },
           {
             name: "Drops",
-            sub: [
-              {
-                name: "Vanilla By Nilla",
-              },
-            ],
+            url: "women",
           },
         ],
         topBrands: [

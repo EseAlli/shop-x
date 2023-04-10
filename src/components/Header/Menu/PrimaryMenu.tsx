@@ -86,36 +86,38 @@ const PrimaryMenu = () => {
       <ul className="bg-[#f2f2f2] md:flex gap-3 lg:gap-6 xl:gap-9 px-16 py-3 lg:py-4 hidden ">
         {menuData.map(({ menu, subMenu }, index: number) => {
           if (menu === current) {
-            return subMenu.map((item) => (
+            return subMenu.map((sub) => (
               <div key={index} className="group">
                 <li className="font-medium hover:cursor-pointer relative text-sm">
                   <Link
-                    href={`/${current}/${item?.url}`}
+                    href={`/${current}/${sub?.url}`}
                     onClick={() => console.log(current)}
                   >
-                    {item?.name}
+                    {sub?.name}
                   </Link>
                 </li>
                 <li>
-                  <div className="absolute hidden group-hover:flex bg-white p-4 z-50 right-0 left-0">
-                    <div className="mx-auto w-full px-12 h-[250px] py-3">
+                  <div className="absolute hidden group-hover:flex bg-white p-4 z-50 right-0 left-0 shadow-md">
+                    <div className="mx-auto w-full px-12 h-[280px] py-3">
                       <ul className="grid  grid-cols-3">
                         <li>
-                          <ul className="grid grid-cols-2 gap-y-2 gap-x-0">
-                            <p className="uppercase text-xs mb-3 text-slate-400 col-span-2">
+                          <ul className="grid grid-cols-2 gap-y-1 gap-x-0">
+                            <p className="uppercase text-xs mb-2 text-slate-400 col-span-2">
                               shop by category
                             </p>
-                            {item?.categories?.map(
-                              ({ name }, index: number) => (
+                            {sub?.categories?.map(
+                              ({ name, url }, index: number) => (
                                 <li key={index}>
-                                  <p className="text-xs">{name}</p>
-                                  {/* <ul>
-                                {sub?.map(({ name }, index: number) => (
-                                  <li className="font-normal" key={index}>
+                                  <Link
+                                    href={
+                                      name !== "Explore All"
+                                        ? `/${current}/${sub.url}/${url}`
+                                        : `/${current}/${sub.url}`
+                                    }
+                                    className="text-xs"
+                                  >
                                     {name}
-                                  </li>
-                                ))}
-                              </ul> */}
+                                  </Link>
                                 </li>
                               )
                             )}
@@ -125,7 +127,7 @@ const PrimaryMenu = () => {
                           <p className="uppercase text-xs text-slate-400 mb-3">
                             top brands
                           </p>
-                          {item?.topBrands?.map(({ name }, index: number) => (
+                          {sub?.topBrands?.map(({ name }, index: number) => (
                             <ul key={index}>
                               <li>
                                 <p className="text-xs">{name}</p>
