@@ -15,14 +15,6 @@ cd shop-x
 yarn install
 ```
 
-## Set up the backend:
-* Install Hasura and PostgreSQL
-* Create a new Hasura project
-* Connect Hasura to your PostgreSQL database
-* Create tables and relationships in Hasura Console
-* Add permissions to tables and relationships in Hasura Console
-* Set up environment variables for the backend in .env.local
-
 Start the development server:
 ```bash
 yarn dev
