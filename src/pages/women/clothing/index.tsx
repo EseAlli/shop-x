@@ -8,7 +8,7 @@ import { paginate } from "helper/paginate";
 const Clothing = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const pageTopRef = useRef(null);
-  const pageSize = 30;
+  const pageSize = 32;
   const onPageChange = useCallback((page: number) => {
     setCurrentPage(page);
     //@ts-ignore

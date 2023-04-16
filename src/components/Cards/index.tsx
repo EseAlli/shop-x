@@ -38,7 +38,7 @@ export const ImageCard = ({ details }: any) => {
 export const ProductCard = ({ product, add }: any) => {
   const { id, images, color, selling_price, brand, name } = product;
   return (
-    <Link href={`/p/${id}`}>
+    <Link href={`/p/${id}`} className="group hover:max-h-80 z-10">
       <div className="hover:cursor-pointer">
         <Image
           src={images[0]}
@@ -46,13 +46,25 @@ export const ProductCard = ({ product, add }: any) => {
           width={400}
           alt={name}
           style={{
-            // minHeight: "400px",
             height: "100%",
             width: "500px",
             objectFit: "contain",
           }}
+          className="group-hover:hidden"
         />
-        <div className="container mx-auto px-3">
+        <Image
+          src={images[1]}
+          height={600}
+          width={400}
+          alt={name}
+          style={{
+            height: "100%",
+            width: "500px",
+            objectFit: "contain",
+          }}
+          className="group-hover:block hidden"
+        />
+        <div className="container mx-auto px-3 group-hover:-translate-y-20 transition group-hover:delay-200 group-hover:bg-white group-hover:py-2">
           <div className="my-2">
             <p className="text-[10px] font-semibold uppercase">{brand}</p>
             <p className="text-[12px]">{name}</p>
@@ -65,13 +77,12 @@ export const ProductCard = ({ product, add }: any) => {
               <div className="p-1.5 rounded-full bg-slate-500 w-px h-px"></div>
               <div className="p-1.5 rounded-full bg-black w-px h-px"></div>
             </div>
-            {add && (
-              <div className="flex my-5 w-full">
-                <button className="bg-black text-center text-white w-full py-4 text-sm font-semibold">
-                  Add
-                </button>
-              </div>
-            )}
+
+            <div className="hidden my-5 w-full group-hover:flex -z-10">
+              <button className="bg-black text-center text-white w-full py-4 text-sm font-semibold">
+                Add
+              </button>
+            </div>
           </div>
         </div>
       </div>

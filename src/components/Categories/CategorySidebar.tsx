@@ -26,7 +26,11 @@ const CategorySidebar = () => {
                 <ul className="ml-5 grid gap-y-2 text-sm">
                   {categories?.map(({ name, url }, index: number) => (
                     <li key={index}>
-                      <Link href={`/${main}/${url}`}>{name}</Link>
+                      {name == "Explore All" ? (
+                        <Link href={`/${main}/${sub}`}>{name}</Link>
+                      ) : (
+                        <Link href={`/${main}/${sub}/${url}`}>{name}</Link>
+                      )}
                     </li>
                   ))}
                 </ul>
