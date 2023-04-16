@@ -78,7 +78,13 @@ export const ProductCard = ({ product, add }: any) => {
               <div className="p-1.5 rounded-full bg-black w-px h-px"></div>
             </div>
 
-            <div className="hidden my-5 w-full group-hover:flex -z-10">
+            <div
+              className={
+                add
+                  ? "flex my-5 w-full"
+                  : "hidden my-5 w-full group-hover:flex -z-10"
+              }
+            >
               <button className="bg-black text-center text-white w-full py-4 text-sm font-semibold">
                 Add
               </button>

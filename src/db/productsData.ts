@@ -19,7 +19,6 @@ export const products = [
     images: [
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/139affb83f16488cb899aafd00b3e2b9_9366/Beach_Shorts_Black_FJ5089_01_laydown.jpg",
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/c235a4db563143b18db4aafd00b3ef38_9366/Beach_Shorts_Black_FJ5089_02_laydown.jpg",
-      
     ],
     country: "USA",
     language: "en",
@@ -149,7 +148,6 @@ export const products = [
     brand: "adidas",
     images: [
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/217f93c3862e45648316ac5d011fe2b8_9366/Mesh_Broken-Stripe_Polo_Shirt_Blue_GM0239_01_laydown.jpg",
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/7978441ffc7d4852bc2fac44006cd80e_9366/Mesh_Broken-Stripe_Polo_Shirt_Blue_GM0239_41_detail.jpg",
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/1e31163790704db59eefac44006c056c_9366/Mesh_Broken-Stripe_Polo_Shirt_Blue_GM0239_42_detail.jpg",
     ],
     country: "USA",
@@ -177,7 +175,6 @@ export const products = [
     brand: "adidas",
     images: [
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/868765405ea54c68abc4ac5c011bc36e_9366/EQT_Spikeless_Golf_Shoes_Grey_FX7449_01_standard.jpg",
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/8802ba989df94bee93c2ac5c011c07da_9366/EQT_Spikeless_Golf_Shoes_Grey_FX7449_02_standard_hover.jpg",
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/c18122833ea347b7aa9cac5c011d8dce_9366/EQT_Spikeless_Golf_Shoes_Grey_FX7449_03_standard.jpg",
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/7222417c2aec4b43939bac5c01230cbf_9366/EQT_Spikeless_Golf_Shoes_Grey_FX7449_04_standard.jpg",
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/a5f4360eb1174a7caf77ac5c011dab19_9366/EQT_Spikeless_Golf_Shoes_Grey_FX7449_05_standard.jpg",
@@ -214,7 +211,6 @@ export const products = [
     brand: "adidas",
     images: [
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/42f190513c264f7793c1ac2800a75d4f_9366/Adicross_Hybrid_Shorts_Black_GM5505_01_laydown.jpg",
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/37b6760a80a04ea99118ac32015339e6_9366/Adicross_Hybrid_Shorts_Black_GM5505_25_outfit.jpg",
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/5e1190c0b3a34f3a9d15ac32014c4a91_9366/Adicross_Hybrid_Shorts_Black_GM5505_41_detail.jpg",
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/4c3fbb1cde784883a856ac32014cdc3e_9366/Adicross_Hybrid_Shorts_Black_GM5505_42_detail.jpg",
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/51cd7c3c62154677a96fad3d0106142d_9366/Adicross_Hybrid_Shorts_Black_GM5505_HM1.jpg",
