@@ -37,7 +37,7 @@ const Modal: FC<ModalProps> = ({ isOpen, children, onClose, title }) => {
                   </span>
                 </button>
               </div>
-              <div className="border-b border-solid border-blueGray-200"></div>
+              {/* <div className="border-b border-solid border-blueGray-200"></div> */}
               <div className="relative p-6 pt-1 flex-auto">{children}</div>
             </div>
           </div>
