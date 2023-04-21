@@ -6,8 +6,6 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange }: Props) => {
 
   if (pagesCount === 1) return null;
   const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
-  console.log(pages);
-
   return (
     <div className="w-full">
       <ul className="flex items-center justify-end ">

@@ -5,13 +5,14 @@ import React, {
   useContext,
   useState,
   useRef,
-  ChangeEvent,
+  useEffect,
 } from "react";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { CartContext } from "context/cartContext";
 import { CartContextType } from "context/types";
 import Image from "next/image";
+import { Cart } from "./types";
 
 type Props = {
   isOpen: boolean;
@@ -19,30 +20,26 @@ type Props = {
 };
 
 const CartModal: FC<Props> = ({ isOpen, onClose }) => {
-  const { currentItem } = useContext(CartContext) as CartContextType;
+  const { currentItem, addToCart } = useContext(CartContext) as CartContextType;
   const [currentImage, setCurrentImage] = useState(currentItem?.images[0]);
-  const [item, setItem] = useState<any>({ ...currentItem });
   const [size, setSize] = useState<string>("");
+
   const sizeRef = useRef(null);
   const addItemToCart = useCallback(() => {
-    if (size === "") {
+    if (size === "" || !size) {
       //@ts-ignore
       sizeRef?.current?.focus();
     } else if (size) {
       //@ts-ignore
-      sizeRef?.current?.blur();
-      setItem({ ...currentItem, size });
-      console.log(item);
+      addToCart({ ...currentItem, size });
     }
-  }, [size, currentItem]);
+  }, [size, addToCart, currentItem]);
 
-  const handleSizeChange = useCallback(
-    (e: any) => {
-      setSize(e.target.value);
-      addItemToCart();
-    },
-    [addItemToCart]
-  );
+  const handleSizeChange = useCallback((e: any) => {
+    setSize(e.target.value);
+    //@ts-ignore
+    sizeRef?.current?.blur();
+  }, []);
   return (
     <>
       <Modal title="" onClose={onClose} isOpen={isOpen}>
@@ -106,16 +103,16 @@ const CartModal: FC<Props> = ({ isOpen, onClose }) => {
                 onBlur={(e) => (e.target.size = 0)}
               >
                 <option value="defaultsize">Select size</option>
-                <option>XS</option>
-                <option>SM</option>
-                <option>MD</option>
+                <option value="xs">XS</option>
+                <option value="sm">SM</option>
+                <option value="md">MD</option>
               </select>
 
               <button
                 className="bg-black text-white py-3"
                 onClick={() => addItemToCart()}
               >
-                Add to cart
+                {size && `${size} - `} Add to cart
               </button>
               <Link
                 href={`/p/${currentItem?.id}`}

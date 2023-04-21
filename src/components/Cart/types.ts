@@ -1,0 +1,22 @@
+export type Cart = {
+  id: number;
+  url: string;
+  name: string;
+  sku: string;
+  selling_price: number;
+  orginal_price: string;
+  availability: string;
+  color: string;
+  source: string;
+  source_website: string;
+  breadcrumbs: string;
+  description: string;
+  brand: string;
+  images: string[];
+  country: string;
+  language: string;
+  average_rating: number;
+  reviews_count: number;
+  crawled_at: string;
+  size: string;
+};

@@ -1,3 +1,5 @@
+import { Cart } from "@components/Cart/types";
+
 export type ProviderProps = {
   children: string | JSX.Element | JSX.Element[] | (() => JSX.Element);
 };
@@ -25,8 +27,8 @@ export interface IProduct {
 }
 
 export type CartContextType = {
-  items: IProduct[];
-  addToCart: (product: IProduct) => void;
+  items: Cart[];
+  addToCart: (product: Cart) => void;
   removeFromCart: (id: number) => void;
   toggleCartModal: boolean;
   setCartModal: (cartModal: boolean) => void;
