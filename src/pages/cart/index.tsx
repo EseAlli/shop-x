@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import Empty from "@components/Empty";
 import { ProductCard } from "@components/Cards";
+import { CartContext } from "context/cartContext";
+import { CartContextType } from "context/types";
 
 const Cart = () => {
   const products = [
@@ -135,6 +137,8 @@ const Cart = () => {
       crawled_at: "2021-10-23 17:50:17.615054",
     },
   ];
+  const { items } = useContext(CartContext) as CartContextType;
+  console.log(items);
   return (
     <div className="container mx-auto px-4 lg:px-0 my-2 md:my-5">
       <div>
@@ -148,7 +152,7 @@ const Cart = () => {
         <h2 className=" md:text-xl font-semibold">Last Viewed</h2>
         <div className="grid lg:grid-cols-4 gap-x-2 gap-y-5 my-2">
           {products.map((product: any, index: number) => (
-            <ProductCard key={index} product={product} />
+            <ProductCard key={index} product={product} add={true} />
           ))}
         </div>
       </div>

@@ -88,12 +88,7 @@ const PrimaryMenu = () => {
             return subMenu.map((sub) => (
               <div key={index} className="group">
                 <li className="font-medium hover:cursor-pointer relative text-sm">
-                  <Link
-                    href={`/${current}/${sub?.url}`}
-                    onClick={() => console.log(current)}
-                  >
-                    {sub?.name}
-                  </Link>
+                  <Link href={`/${current}/${sub?.url}`}>{sub?.name}</Link>
                 </li>
                 <li>
                   <div className="absolute hidden group-hover:flex bg-white p-4 z-50 right-0 left-0 shadow-md">
