@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import { CartContext } from "context/cartContext";
 import { CartContextType, IProduct } from "context/types";
 
-export const CCard = ({ content }: any) => {
+export const CCard = ({ content }: { content: string }) => {
   return (
     <div className="text-black bg-[#f2f2f2] px-8 py-4 text-center">
       <p className="capitalize">{content}</p>
@@ -12,13 +12,13 @@ export const CCard = ({ content }: any) => {
   );
 };
 
-export const ImageCard = ({ details }: any) => {
-  const { image: src, name, brand, price } = details;
+export const ImageCard = ({ details }: { details: IProduct }) => {
+  const { images: src, name, brand, selling_price: price } = details;
 
   return (
     <div className="hover:cursor-pointer">
       <Image
-        src={src}
+        src={src[0]}
         height={400}
         width={400}
         alt="women-popular"
@@ -37,7 +37,13 @@ export const ImageCard = ({ details }: any) => {
   );
 };
 
-export const ProductCard = ({ product, add }: any) => {
+export const ProductCard = ({
+  product,
+  add,
+}: {
+  product: IProduct;
+  add?: boolean;
+}) => {
   const { id, images, color, selling_price, brand, name } = product;
   const { setCartModal, setCurrentItem } = useContext(
     CartContext

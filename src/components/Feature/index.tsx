@@ -1,6 +1,5 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
-import feature from "../../../public/feature.avif";
 
 export const Single = () => {
   return (
@@ -22,7 +21,11 @@ export const Single = () => {
   );
 };
 
-export const DoubleFeature = ({ feature }: any) => {
+export const DoubleFeature = ({
+  feature,
+}: {
+  feature: { tagline: string; title: string; image: StaticImageData };
+}) => {
   return (
     <div className="my-5 md:my-14 xl:my-24 2xl:container mx-auto px-2 md:px-4 lg:px-8">
       <div className="flex ">

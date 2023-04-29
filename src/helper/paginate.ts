@@ -1,5 +1,7 @@
+import { IProduct } from "context/types";
+
 export const paginate = (
-  items: any[],
+  items: IProduct[],
   pageNumber: number,
   pageSize: number
 ) => {

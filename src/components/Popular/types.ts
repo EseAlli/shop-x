@@ -1,4 +1,5 @@
+import { IProduct } from "context/types";
 export type Props = {
-  item: any;
+  products: IProduct[];
   name: string;
 };

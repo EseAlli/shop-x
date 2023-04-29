@@ -10,7 +10,7 @@ export interface IProduct {
   name: string;
   sku: string;
   selling_price: number;
-  orginal_price: string;
+  original_price: string;
   availability: string;
   color: string;
   source: string;
@@ -32,6 +32,6 @@ export type CartContextType = {
   removeFromCart: (id: number) => void;
   toggleCartModal: boolean;
   setCartModal: (cartModal: boolean) => void;
-  currentItem: IProduct | null;
+  currentItem: IProduct | undefined;
   setCurrentItem: (product: IProduct) => void | null;
 };

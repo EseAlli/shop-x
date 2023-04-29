@@ -1,15 +1,15 @@
 import React from "react";
-import item from "../../../public/kid.avif";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Select from "@components/Select";
 import { AiOutlineHeart } from "react-icons/ai";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { IProduct } from "context/types";
 
-export const ProductCarousel = ({ items }: any) => {
+export const ProductCarousel = ({ images }: { images: string[] }) => {
   const content = () => {
-    return items.map((image: any, index: number) => {
+    return images.map((image, index: number) => {
       return (
         <div key={index} className="relative">
           <Image
@@ -36,7 +36,7 @@ export const ProductCarousel = ({ items }: any) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
-    appendDots: (dots: any) => (
+    appendDots: (dots: string) => (
       <div
         style={{
           backgroundColor: "transparent",
@@ -55,7 +55,13 @@ export const ProductCarousel = ({ items }: any) => {
   );
 };
 
-export const ColourPicker = ({ sellingPrice, color }: any) => {
+export const ColourPicker = ({
+  sellingPrice,
+  color,
+}: {
+  sellingPrice: string;
+  color: string;
+}) => {
   return (
     <div className="my-2 lg:my-4">
       <p>$ {sellingPrice}</p>
@@ -80,14 +86,12 @@ export const ColourPicker = ({ sellingPrice, color }: any) => {
   );
 };
 
-export const ProductDetails = ({ product }: any) => {
+export const ProductDetails = ({ product }: { product: IProduct }) => {
   return (
     <div className="mx-auto max-w-[95%] mb-4 md:mb-7">
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-7/12">
-          {product?.images && (
-            <ProductCarousel items={product?.images} autoplay={false} />
-          )}
+          {product?.images && <ProductCarousel images={product?.images} />}
         </div>
         <div className="w-full md:w-4/12 mx-auto md:py-4 lg:py-7 px-4">
           <div className="flex flex-col gap-2">
@@ -96,7 +100,7 @@ export const ProductDetails = ({ product }: any) => {
             </p>
             <p className="text-sm">{product?.name}</p>
             <ColourPicker
-              sellingPrice={product?.selling_price}
+              sellingPrice={product?.selling_price.toString()}
               color={product?.color}
             />
 

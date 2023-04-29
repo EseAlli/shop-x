@@ -12,7 +12,7 @@ export const CartContext = createContext<CartContextType | null>(null);
 
 const cartReducer = (
   state: { items: Cart[] },
-  action: { type: string; payload: any }
+  action: { type: string; payload: { items: Cart[] } }
 ) => {
   const { type, payload } = action;
 
@@ -37,7 +37,9 @@ const cartReducer = (
 export const CartProvider = ({ children }: ProviderProps) => {
   const [state, dispatch] = useReducer(cartReducer, { items: [] });
   const [cartModal, setCartModal] = useState(false);
-  const [currentItem, setCurrentItem] = useState<IProduct | null>(null);
+  const [currentItem, setCurrentItem] = useState<IProduct | undefined>(
+    undefined
+  );
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(state.items));

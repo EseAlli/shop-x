@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Empty from "@components/Empty";
 import { ProductCard } from "@components/Cards";
 import { CartContext } from "context/cartContext";
-import { CartContextType } from "context/types";
+import { CartContextType, IProduct } from "context/types";
 
 const Cart = () => {
   const products = [
@@ -151,7 +151,7 @@ const Cart = () => {
       <div className="my-8 lg:py-52">
         <h2 className=" md:text-xl font-semibold">Last Viewed</h2>
         <div className="grid lg:grid-cols-4 gap-x-2 gap-y-5 my-2">
-          {products.map((product: any, index: number) => (
+          {products.map((product: IProduct, index: number) => (
             <ProductCard key={index} product={product} add={true} />
           ))}
         </div>

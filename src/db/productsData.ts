@@ -5957,7 +5957,7 @@ const extra = [
     crawled_at: "2021-10-23 17:50:43.926870",
   },
   {
-    id: 1,
+    id: 91,
     url: "https://www.adidas.com/us/classic-waist-bag/GU0890.html",
     name: "Classic Waist Bag",
     sku: "GU0890",
@@ -6191,7 +6191,7 @@ const extra = [
     crawled_at: "2021-10-23 17:50:45.073623",
   },
   {
-    id: 1,
+    id: 101,
     url: "https://www.adidas.com/us/waist-bag/H09044.html",
     name: "Waist Bag",
     sku: "H09044",

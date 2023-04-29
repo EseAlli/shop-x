@@ -6,6 +6,7 @@ import React, {
   useState,
   useRef,
   useEffect,
+  ChangeEvent,
 } from "react";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
@@ -24,20 +25,18 @@ const CartModal: FC<Props> = ({ isOpen, onClose }) => {
   const [currentImage, setCurrentImage] = useState(currentItem?.images[0]);
   const [size, setSize] = useState<string>("");
 
-  const sizeRef = useRef(null);
+  const sizeRef = useRef<HTMLSelectElement>(null);
   const addItemToCart = useCallback(() => {
     if (size === "" || !size) {
-      //@ts-ignore
       sizeRef?.current?.focus();
     } else if (size) {
-      //@ts-ignore
+      if (!currentItem) return;
       addToCart({ ...currentItem, size });
     }
   }, [size, addToCart, currentItem]);
 
-  const handleSizeChange = useCallback((e: any) => {
+  const handleSizeChange = useCallback((e: ChangeEvent<HTMLSelectElement>) => {
     setSize(e.target.value);
-    //@ts-ignore
     sizeRef?.current?.blur();
   }, []);
   return (

@@ -1,6 +1,7 @@
 import { ProductCard } from "@components/Cards";
 import React from "react";
 import { products } from "@db/productsData";
+import { IProduct } from "context/types";
 
 const index = () => {
   return (
@@ -22,7 +23,7 @@ const index = () => {
             </div>
             <hr />
             <div className="grid lg:grid-cols-4 gap-x-2 gap-y-5 my-2">
-              {products.map((product: any, index: number) => (
+              {products.map((product: IProduct, index: number) => (
                 <ProductCard key={index} product={product} />
               ))}
             </div>

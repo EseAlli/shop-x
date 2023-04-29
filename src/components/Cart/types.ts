@@ -4,7 +4,7 @@ export type Cart = {
   name: string;
   sku: string;
   selling_price: number;
-  orginal_price: string;
+  original_price: string;
   availability: string;
   color: string;
   source: string;

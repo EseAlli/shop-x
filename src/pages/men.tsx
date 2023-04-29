@@ -11,11 +11,11 @@ const men = () => {
     <>
       <Carousel items={carousel} autoplay={true} />
       <Categories data={categories} />
-      <Popular item={shoes} name="shoes" />
+      <Popular products={shoes} name="shoes" />
       <SFeature />
-      <Popular item={bags} name="bags" />
+      <Popular products={bags} name="bags" />
       <DoubleFeature feature={feature} />
-      <Popular item={accessories} name="accessories" />
+      <Popular products={accessories} name="accessories" />
     </>
   );
 };

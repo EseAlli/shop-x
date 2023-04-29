@@ -2,12 +2,23 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-const index = ({ items, autoplay }: any) => {
+const index = ({
+  items,
+  autoplay,
+}: {
+  items: {
+    image: StaticImageData;
+    tagline: string;
+    title: string;
+    url: string;
+  }[];
+  autoplay: boolean;
+}) => {
   const content = () => {
-    return items.map(({ image, tagline, title, url }: any, index: number) => {
+    return items.map(({ image, tagline, title, url }, index: number) => {
       return (
         <div
           key={index}
@@ -48,7 +59,7 @@ const index = ({ items, autoplay }: any) => {
     slidesToScroll: 1,
     autoplay: autoplay || false,
     autoplaySpeed: 9000,
-    appendDots: (dots: any) => (
+    appendDots: (dots: string) => (
       <div
         style={{
           backgroundColor: "transparent",

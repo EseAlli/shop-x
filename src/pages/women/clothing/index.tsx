@@ -4,14 +4,14 @@ import { ProductCard } from "@components/Cards";
 import { products } from "@db/productsData";
 import Pagination from "@components/Pagination";
 import { paginate } from "helper/paginate";
+import { IProduct } from "context/types";
 
 const Clothing = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const pageTopRef = useRef(null);
+  const pageTopRef = useRef<HTMLDivElement>(null);
   const pageSize = 32;
   const onPageChange = useCallback((page: number) => {
     setCurrentPage(page);
-    //@ts-ignore
     pageTopRef?.current?.scrollIntoView();
   }, []);
   const paginatedProducts = paginate(products, currentPage, pageSize);
@@ -23,7 +23,7 @@ const Clothing = () => {
         className="grid lg:grid-cols-4 gap-x-2 gap-y-5 my-2"
         ref={pageTopRef}
       >
-        {paginatedProducts.map((product: any, index: number) => (
+        {paginatedProducts.map((product: IProduct, index: number) => (
           <ProductCard key={index} product={product} add={false} />
         ))}
       </div>
