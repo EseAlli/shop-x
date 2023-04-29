@@ -8,12 +8,8 @@ const ProductInfo = () => {
   const { carousel } = homeData.women;
   const router = useRouter();
   const { id } = router.query;
-  const product = products.find((product) => product.id === Number(id));
-  return (
-    <>
-      <ProductDetails product={product} />
-    </>
-  );
+  const product = products?.find((product) => product.id === Number(id));
+  return <>{product && <ProductDetails product={product} />}</>;
 };
 
 export default ProductInfo;
