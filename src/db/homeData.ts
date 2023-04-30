@@ -14,24 +14,29 @@ export const homeData = {
     categories: [
       {
         name: "dresses",
+        url: "/women/clothing/dresses",
       },
       {
         name: "jeans",
+        url: "/women/clothing/jeans",
       },
       {
         name: "shoes",
+        url: "/women/clothing/shoes",
       },
       {
         name: "bags",
+        url: "/women/clothing/bags",
       },
       {
         name: "tops",
+        url: "/women/clothing/tops",
       },
     ],
     popular: {
       dresses: [
         {
-          id: 1,
+          id: 109,
           url: "https://www.adidas.com/us/postmove-shoes/H00460.html",
           name: "Postmove Shoes",
           sku: "H00460",
@@ -65,7 +70,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:51:42.983368",
         },
         {
-          id: 1,
+          id: 108,
           url: "https://www.adidas.com/us/bryony-shoes/GY5469.html",
           name: "Bryony Shoes",
           sku: "GY5469",
@@ -100,7 +105,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:51:43.060744",
         },
         {
-          id: 1,
+          id: 107,
           url: "https://www.adidas.com/us/zx-1k-shoes/Q46277.html",
           name: "ZX 1K Shoes",
           sku: "Q46277",
@@ -136,7 +141,7 @@ export const homeData = {
       ],
       bags: [
         {
-          id: 1,
+          id: 106,
           url: "https://www.adidas.com/us/postmove-shoes/H00462.html",
           name: "Postmove Shoes",
           sku: "H00462",
@@ -170,7 +175,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:51:43.219558",
         },
         {
-          id: 1,
+          id: 105,
           url: "https://www.adidas.com/us/zx-2k-shoes/H02366.html",
           name: "ZX 2K Shoes",
           sku: "H02366",
@@ -206,7 +211,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:51:43.303106",
         },
         {
-          id: 1,
+          id: 125,
           url: "https://www.adidas.com/us/hulk-stan-smith-shoes/S42627.html",
           name: "HULK STAN SMITH SHOES",
           sku: "S42627",
@@ -241,7 +246,7 @@ export const homeData = {
       ],
       accessories: [
         {
-          id: 1,
+          id: 103,
           url: "https://www.adidas.com/us/ownthegame-shoes/H00466.html",
           name: "Ownthegame Shoes",
           sku: "H00466",
@@ -274,7 +279,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:51:43.576443",
         },
         {
-          id: 1,
+          id: 102,
           url: "https://www.adidas.com/us/designed-to-move-high-rise-sport-zebra-capri-tights/GT0133.html",
           name: "Designed to Move High-Rise Sport Zebra Capri Tights",
           sku: "GT0133",
@@ -305,7 +310,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:51:43.656868",
         },
         {
-          id: 1,
+          id: 101,
           url: "https://www.adidas.com/us/hamburg-shoes/GZ7408.html",
           name: "Hamburg Shoes",
           sku: "GZ7408",
@@ -370,24 +375,29 @@ export const homeData = {
     categories: [
       {
         name: "t-shirt",
+        url: "/men/clothing/t-shirt",
       },
       {
         name: "jeans",
+        url: "/men/clothing/jeans",
       },
       {
         name: "shoes",
+        url: "/men/clothing/shoes",
       },
       {
         name: "bags",
+        url: "/men/clothing/bags",
       },
       {
         name: "sweats",
+        url: "/men/clothing/sweats",
       },
     ],
     popular: {
       shoes: [
         {
-          id: 1,
+          id: 110,
           url: "https://www.adidas.com/us/postmove-shoes/H00460.html",
           name: "Postmove Shoes",
           sku: "H00460",
@@ -421,7 +431,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:51:42.983368",
         },
         {
-          id: 1,
+          id: 111,
           url: "https://www.adidas.com/us/bryony-shoes/GY5469.html",
           name: "Bryony Shoes",
           sku: "GY5469",
@@ -456,7 +466,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:51:43.060744",
         },
         {
-          id: 1,
+          id: 112,
           url: "https://www.adidas.com/us/zx-1k-shoes/Q46277.html",
           name: "ZX 1K Shoes",
           sku: "Q46277",
@@ -492,7 +502,7 @@ export const homeData = {
       ],
       bags: [
         {
-          id: 90,
+          id: 113,
           url: "https://www.adidas.com/us/4athlts-id-duffel-bag-small/GL0880.html",
           name: "4ATHLTS ID Duffel Bag Small",
           sku: "GL0880",
@@ -524,7 +534,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:50:30.865395",
         },
         {
-          id: 91,
+          id: 114,
           url: "https://www.adidas.com/us/classic-waist-bag/GU0890.html",
           name: "Classic Waist Bag",
           sku: "GU0890",
@@ -555,7 +565,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:50:44.523187",
         },
         {
-          id: 101,
+          id: 115,
           url: "https://www.adidas.com/us/waist-bag/H09044.html",
           name: "Waist Bag",
           sku: "H09044",
@@ -588,7 +598,7 @@ export const homeData = {
       ],
       accessories: [
         {
-          id: 123,
+          id: 116,
           url: "https://www.adidas.com/us/r.y.v.-baseball-cap/H25275.html",
           name: "R.Y.V. Baseball Cap",
           sku: "H25275",
@@ -617,7 +627,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:51:12.539980",
         },
         {
-          id: 26,
+          id: 117,
           url: "https://www.adidas.com/us/conext-21-mini-ball/GK3487.html",
           name: "Conext 21 Mini Ball",
           sku: "GK3487",
@@ -646,7 +656,7 @@ export const homeData = {
           crawled_at: "2021-10-23 17:50:21.104086",
         },
         {
-          id: 86,
+          id: 118,
           url: "https://www.adidas.com/us/ultralight-allover-graphic-crew-performance-socks/GH7532.html",
           name: "Ultralight Allover Graphic Crew Performance Socks",
           sku: "GH7532",

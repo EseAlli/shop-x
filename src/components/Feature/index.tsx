@@ -27,7 +27,7 @@ export const DoubleFeature = ({
   feature: { tagline: string; title: string; image: StaticImageData };
 }) => {
   return (
-    <div className="my-5 md:my-14 xl:my-24 2xl:container mx-auto px-2 md:px-4 lg:px-8">
+    <div className="my-5 md:my-14 xl:my-24 2xl:container mx-auto px-2 md:px-4 lg:px-8 w-full">
       <div className="flex ">
         <div className="bg-[#8EBADE] w-[80%] text-white">
           <div className="flex items-center max-w-xl mx-auto h-full px-4">

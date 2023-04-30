@@ -3,20 +3,29 @@ import Link from "next/link";
 import React, { useContext } from "react";
 import { CartContext } from "context/cartContext";
 import { CartContextType, IProduct } from "context/types";
+import { useRouter } from "next/router";
 
-export const CCard = ({ content }: { content: string }) => {
+export const CCard = ({ content, url }: { content: string; url: string }) => {
   return (
-    <div className="text-black bg-[#f2f2f2] px-8 py-4 text-center">
-      <p className="capitalize">{content}</p>
-    </div>
+    <Link href={url}>
+      <div className="text-black bg-[#f2f2f2] px-8 py-4 text-center">
+        <p className="capitalize">{content}</p>
+      </div>
+    </Link>
   );
 };
 
 export const ImageCard = ({ details }: { details: IProduct }) => {
-  const { images: src, name, brand, selling_price: price } = details;
+  const { images: src, name, brand, selling_price: price, id } = details;
+  const router = useRouter();
 
   return (
-    <div className="hover:cursor-pointer">
+    <div
+      className="hover:cursor-pointer"
+      onClick={() => {
+        router.push(`p/${id}`);
+      }}
+    >
       <Image
         src={src[0]}
         height={400}
