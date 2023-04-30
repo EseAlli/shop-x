@@ -1,8 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useCallback } from "react";
 import Empty from "@components/Empty";
 import { ProductCard } from "@components/Cards";
 import { CartContext } from "context/cartContext";
 import { CartContextType, IProduct } from "context/types";
+import CartItem from "@components/Cart/CartItem";
+import Total from "@components/Cart/Total";
+import mastercard from "../../../public/Mastercard-logo.png";
+import visa from "../../../public/Visa.png";
+import paypal from "../../../public/paypal.png";
+import Image from "next/image";
+import Moment from "react-moment";
+import moment from "moment";
 
 const Cart = () => {
   const products = [
@@ -138,17 +146,75 @@ const Cart = () => {
     },
   ];
   const { items } = useContext(CartContext) as CartContextType;
-  console.log(items);
+  const getTotal = useCallback(() => {
+    console.log(moment().add(10, "days").format("ddd, DD/M"));
+    return items.reduce((previousValue, currentValue) => {
+      return previousValue + currentValue.selling_price;
+    }, 0);
+  }, [items]);
+
   return (
     <div className="container mx-auto px-4 lg:px-0 my-2 md:my-5">
       <div>
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold">Cart</h2>
+        {!items ||
+          (items.length === 0 && (
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold">Cart</h2>
+          ))}
       </div>
-      <div className="max-w-4xl mx-auto md:my-5 lg:my-24">
-        <Empty header="Your Basket is Empty" body="Add Products or Login" />
+      <div className="w-full mt-2">
+        {!items || items.length === 0 ? (
+          <div className="md:my-5 lg:my-24 mx-auto max-w-4xl">
+            <Empty header="Your Basket is Empty" body="Add Products or Login" />
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-12 p-4 bg-[#f2f2f2] gap-x-5">
+            <div className="bg-white p-5 col-span-8">
+              <p className="text-xl font-semibold">
+                Your bag {`(${items.length} items)`}
+              </p>
+              <div className="grid gap-y-5">
+                {items.map((item) => {
+                  return <CartItem key={item.id} item={item} />;
+                })}
+              </div>
+            </div>
+
+            <div className="col-span-4">
+              <Total totalPrice={getTotal()} />
+            </div>
+
+            <div className="mb-5 mt-7 bg-white col-span-12 w-2/3 p-5">
+              <p className="font-semibold">Estimated delivery</p>
+              <p>
+                {moment().add(5, "days").format("ddd, DD/M")} -{" "}
+                {moment().add(10, "days").format("ddd, DD/M")}
+              </p>
+            </div>
+
+            <div className="mb-5 bg-white col-span-12 w-2/3 p-5">
+              <p className="font-semibold">We accept</p>
+              <ul className="mt-3 flex gap-4 items-center">
+                <li>
+                  <Image
+                    src={mastercard}
+                    alt="mastercard"
+                    height={32}
+                    width={32}
+                  />
+                </li>
+                <li>
+                  <Image src={visa} alt="visa" height={32} width={32} />
+                </li>
+                <li>
+                  <Image src={paypal} alt="paypal" height={32} width={32} />
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
 
-      <div className="my-8 lg:py-52">
+      <div className="my-8">
         <h2 className=" md:text-xl font-semibold">Last Viewed</h2>
         <div className="grid lg:grid-cols-4 gap-x-2 gap-y-5 my-2">
           {products.map((product: IProduct, index: number) => (

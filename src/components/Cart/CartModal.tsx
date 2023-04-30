@@ -31,7 +31,9 @@ const CartModal: FC<Props> = ({ isOpen, onClose }) => {
       sizeRef?.current?.focus();
     } else if (size) {
       if (!currentItem) return;
-      addToCart({ ...currentItem, size });
+      else {
+        addToCart({ ...currentItem, size, quantity: 1 });
+      }
     }
   }, [size, addToCart, currentItem]);
 

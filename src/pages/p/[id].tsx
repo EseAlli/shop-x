@@ -5,7 +5,6 @@ import { products } from "@db/productsData";
 import { useRouter } from "next/router";
 
 const ProductInfo = () => {
-  const { carousel } = homeData.women;
   const router = useRouter();
   const { id } = router.query;
   const product = products?.find((product) => product.id === Number(id));

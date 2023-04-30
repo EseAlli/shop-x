@@ -19,4 +19,5 @@ export type Cart = {
   reviews_count: number;
   crawled_at: string;
   size: string;
+  quantity: number;
 };
