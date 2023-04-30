@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RxCaretDown, RxCaretUp } from "react-icons/rx";
+import Link from "next/link";
 
 const Total = ({ totalPrice }: { totalPrice: number }) => {
   const [showVoucher, setShowVoucher] = useState(false);
@@ -21,9 +22,12 @@ const Total = ({ totalPrice }: { totalPrice: number }) => {
             <p className="font-semibold">Total (VAT included)</p>
             <p>${totalPrice}</p>
           </div>
-          <button className="w-full bg-black text-white py-3 my-5">
+          <Link
+            href="/checkout"
+            className="w-full bg-black text-white py-3 my-5 text-center"
+          >
             Proceed to Checkout
-          </button>
+          </Link>
         </div>
       </div>
       <div className="my-3 bg-white p-5">
